@@ -1,1 +1,57 @@
-@import "./shared"
+@import "./shared";
+
+.infos-section {
+    max-width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.infos-text-content {
+    margin-left: 10%;
+    width: 53%;
+    margin-top: 6%;
+}
+
+.infos-title {
+    font-size: 82px;
+    line-height: 105px;
+    color: $neutral-color-blue;
+}
+
+.infos-paragraph {
+    color: $neutral-color-Gviolet;
+    font-size: 24px;
+    width: 90%;
+    line-height: 42px;
+    margin-top: 5px;
+}
+
+.started-btn {
+    background: $primary-color-cyan;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 45px;
+    color: #fff;
+    font-weight: $font-weight-bold;
+    margin-top: 50px;
+}
+
+.started-btn:hover {
+    opacity: 0.8;
+}
+
+.infos-image-content {
+    width: 47%;
+    height: 100%;
+    position: relative;
+}
+
+.infos-image {
+    background: url('../assets/illustration-working.svg') no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 2%;
+}
