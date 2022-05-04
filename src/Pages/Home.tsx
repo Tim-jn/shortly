@@ -1,7 +1,10 @@
-import "../styles/Home.scss"
+import '../styles/Home.scss'
+import Header from '../Components/Header'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <main className="home">
+      <Header />
+    </main>
   )
 }

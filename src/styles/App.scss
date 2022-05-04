@@ -1,0 +1,23 @@
+@import './shared';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $body-font-size;
+}
+
+body {
+    max-width: 1440px;
+    margin: 5% 10%;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}

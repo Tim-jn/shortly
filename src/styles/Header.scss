@@ -1,0 +1,51 @@
+@import './shared';
+
+.header, .nav-content, .header-account, .header-nav {
+    display: flex;
+    flex-direction: row;
+    font-weight: $font-weight-bold;
+    align-items: center;
+}
+
+.header {
+    justify-content: space-between;
+}
+
+.header a {
+    color: $neutral-color-Gviolet;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-nav {
+    margin-left: 50px;
+    gap: 30px;
+}
+
+.header-nav li:hover {
+    color: $neutral-color-Dviolet;
+}
+
+.header-account {
+    gap: 30px;
+}
+
+.login:hover {
+    color: $neutral-color-Dviolet;
+}
+
+.signup {
+    background-color: $primary-color-cyan;
+    color: #FFF;
+    padding: 8px 25px;
+    border-radius: 50px;
+}
+
+.signup:hover {
+    opacity: 0.8;
+}
