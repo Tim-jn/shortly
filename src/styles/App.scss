@@ -10,8 +10,10 @@
 
 body {
     max-width: 1440px;
-    max-height: 100vh;
+    height: 100vh;
     margin: auto;
+    display:flex; 
+    flex-direction:column; 
 }
 
 li {

@@ -1,0 +1,18 @@
+@import './shared';
+
+.footer {
+    margin-top:auto;
+    background: url('../assets/bg-boost-desktop.svg') no-repeat center;
+    background-color: $primary-color-violet;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0px;
+}
+
+.footer-title {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 25px;
+}

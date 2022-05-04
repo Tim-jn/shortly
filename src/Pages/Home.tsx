@@ -1,6 +1,7 @@
 import '../styles/Home.scss'
 import Header from '../Components/Header'
 import { Link } from 'react-router-dom'
+import Footer from '../Components/Footer'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           <div className="infos-image"></div>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }

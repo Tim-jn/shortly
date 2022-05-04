@@ -25,6 +25,7 @@
     width: 90%;
     line-height: 42px;
     margin-top: 5px;
+    margin-bottom: 50px;
 }
 
 .started-btn {
@@ -34,11 +35,10 @@
     padding: 15px 45px;
     color: #fff;
     font-weight: $font-weight-bold;
-    margin-top: 50px;
 }
 
 .started-btn:hover {
-    opacity: 0.8;
+    filter: brightness(104%);
 }
 
 .infos-image-content {
