@@ -38,7 +38,7 @@
 }
 
 .started-btn:hover {
-    filter: brightness(104%);
+    background-color: lighten($primary-color-cyan, 17%);
     transition: all 0.2s;
 }
 

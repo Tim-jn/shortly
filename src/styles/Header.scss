@@ -51,6 +51,6 @@
 }
 
 .signup a:hover {
-    opacity: 0.8;
+    background-color: lighten($primary-color-cyan, 17%);
     transition: all 0.2s;
 }
