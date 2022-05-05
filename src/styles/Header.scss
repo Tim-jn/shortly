@@ -38,19 +38,19 @@
     gap: 30px;
 }
 
-.login:hover {
+.login a:hover {
     color: $neutral-color-Dviolet;
     transition: all 0.2s;
 }
 
-.signup {
+.signup a {
     background-color: $primary-color-cyan;
     color: #FFF;
     padding: 8px 25px;
     border-radius: 50px;
 }
 
-.signup:hover {
+.signup a:hover {
     opacity: 0.8;
     transition: all 0.2s;
 }

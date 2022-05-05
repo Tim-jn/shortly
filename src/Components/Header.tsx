@@ -23,12 +23,12 @@ export default function Header() {
       </div>
       <div className="account">
         <ul className="header-account">
-          <Link to="/error404">
-            <li className="login">Login</li>
-          </Link>
-          <Link to="/error404">
-            <li className="signup">Sign Up</li>
-          </Link>
+          <li className="login">
+            <Link to="/error404">Login</Link>
+          </li>
+          <li className="signup">
+            <Link to="/error404">Sign Up</Link>
+          </li>
         </ul>
       </div>
     </header>

@@ -13,42 +13,42 @@ export default function Footer() {
       <div className="footer-links-section">
         <ul className="columns first-column">
           <li className="column-title features">Features</li>
-          <Link to="/error404">
-            <li className="first-column-link">Link Shortening</li>
-          </Link>
-          <Link to="/error404">
-            <li className="first-column-link">Branded Links</li>
-          </Link>
-          <Link to="/error404">
-            <li className="first-column-link">Analytics</li>
-          </Link>
+          <li className="first-column-link">
+            <Link to="/error404">Link Shortening</Link>
+          </li>
+          <li className="first-column-link">
+            <Link to="/error404">Branded Links</Link>
+          </li>
+          <li className="first-column-link">
+            <Link to="/error404">Analytics</Link>
+          </li>
         </ul>
         <ul className="columns second-column">
           <li className="column-title resources">Resources</li>
-          <Link to="/error404">
-            <li className="second-column-link">Blog</li>
-          </Link>
-          <Link to="/error404">
-            <li className="second-column-link">Developers</li>
-          </Link>
-          <Link to="/error404">
-            <li className="second-column-link">Support</li>
-          </Link>
+          <li className="second-column-link">
+            <Link to="/error404">Blog</Link>
+          </li>
+          <li className="second-column-link">
+            <Link to="/error404">Developers</Link>
+          </li>
+          <li className="second-column-link">
+            <Link to="/error404">Support</Link>
+          </li>
         </ul>
         <ul className="columns third-column">
           <li className="column-title company">Company</li>
-          <Link to="/error404">
-            <li className="third-column-link">About</li>
-          </Link>
-          <Link to="/error404">
-            <li className="third-column-link">Our Team</li>
-          </Link>
-          <Link to="/error404">
-            <li className="third-column-link">Careers</li>
-          </Link>
-          <Link to="/error404">
-            <li className="third-column-link">Contact</li>
-          </Link>
+          <li className="third-column-link">
+            <Link to="/error404">About</Link>
+          </li>
+          <li className="third-column-link">
+            <Link to="/error404">Our Team</Link>
+          </li>
+          <li className="third-column-link">
+            <Link to="/error404">Careers</Link>
+          </li>
+          <li className="third-column-link">
+            <Link to="/error404">Contact</Link>
+          </li>
         </ul>
       </div>
       <ul className="social-icons">

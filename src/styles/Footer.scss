@@ -37,12 +37,12 @@
     color: #fff!important;
 }
 
-.columns li {
+.columns a {
     line-height: 32px;
     font-size: 15px;
 }
 
-.columns li:hover {
+.columns a:hover {
     color: $primary-color-cyan;
     transition: all 0.2s;
 }
@@ -53,7 +53,6 @@
     gap: 25px;
     align-items: baseline;
     height: 24px;
-    cursor: pointer;
     margin-top: 5px;
 }
 
