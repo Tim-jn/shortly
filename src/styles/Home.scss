@@ -56,3 +56,51 @@
     right: 0px;
     top: 2%;
 }
+
+.stats-section {
+    background: hsla(258, 7%, 63%, 0.123);
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 7%;
+}
+
+.stats-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 8% 10%;
+    position: relative;
+}
+
+.stats-cards::after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background: $primary-color-cyan;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: -1;
+}
+
+.stats-card:nth-child(2) {
+    margin-top: 50px;
+}
+
+.stats-card:nth-child(3) {
+    margin-top: 100px;
+}
+
+.stats-title {
+    font-size: 38px;
+    color: $neutral-color-blue;
+}
+
+.stats-paragraph {
+    color: $neutral-color-Gviolet;
+    max-width: 510px;
+    margin: 10px auto;
+}
