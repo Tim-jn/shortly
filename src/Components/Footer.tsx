@@ -1,9 +1,5 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo-footer.svg'
-import iconFacebook from '../assets/icon-facebook.svg'
-import iconTwitter from '../assets/icon-twitter.svg'
-import iconPinterest from '../assets/icon-pinterest.svg'
-import iconInstagram from '../assets/icon-instagram.svg'
 import '../styles/Footer.scss'
 
 export default function Footer() {
