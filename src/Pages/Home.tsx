@@ -1,7 +1,7 @@
 import '../styles/Home.scss'
 import Header from '../Components/Header'
 import { Link } from 'react-router-dom'
-import Footer from '../Components/Footer'
+import FooterBanner from '../Components/FooterBanner'
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
           <div className="infos-image"></div>
         </div>
       </section>
-      <Footer />
+      <FooterBanner />
     </main>
   )
 }
