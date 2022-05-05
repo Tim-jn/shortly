@@ -9,17 +9,17 @@ export default function Header() {
         <Link to="/">
           <img src={logo} alt="Shortly logo" className="logo" />
         </Link>
-        <ul className="header-nav">
-          <Link to="/">
-            <li className="features">Features</li>
+        <nav className="header-nav">
+          <Link to="/" className="features">
+            Features
           </Link>
-          <Link to="/error404">
-            <li className="pricing">Pricing</li>
+          <Link to="/error404" className="pricing">
+            Pricing
           </Link>
-          <Link to="/error404">
-            <li className="resources">Resources</li>
+          <Link to="/error404" className="resources">
+            Resources
           </Link>
-        </ul>
+        </nav>
       </div>
       <div className="account">
         <ul className="header-account">
