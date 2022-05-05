@@ -57,13 +57,10 @@
     margin-top: 5px;
 }
 
-.social-icons li {
+.social-icons a {
     height: 24px;
     width: 24px;
-    object-fit: contain;
-}
-
-.social-icons img {
+    object-fit: contain; 
     cursor: pointer;
 }
 

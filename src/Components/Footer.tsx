@@ -51,12 +51,40 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <ul className="social-icons">
-        <li className="facebook"></li>
-        <li className="twitter"></li>
-        <li className="pinterest"></li>
-        <li className="instagram"></li>
-      </ul>
+      <div className="social-icons">
+        <a
+          href="https://facebook.com"
+          className="facebook"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Facebook
+        </a>
+        <a
+          href="https://twitter.com"
+          className="twitter"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Twitter
+        </a>
+        <a
+          href="https://pinterest.com"
+          className="pinterest"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Pinterest
+        </a>
+        <a
+          href="https://instagram.com"
+          className="instagram"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+      </div>
     </footer>
   )
 }
