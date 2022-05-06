@@ -7,6 +7,7 @@ import StatsCard from '../Components/StatsCard'
 import brandIcon from '../assets/icon-brand-recognition.svg'
 import recordsIcon from '../assets/icon-detailed-records.svg'
 import customIcon from '../assets/icon-fully-customizable.svg'
+import ShortenLink from '../Components/ShortenLink'
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         </div>
       </section>
       <section className="stats-section">
+        <ShortenLink />
         <div className="stats-text">
           <h2 className="stats-title">Advanced Statistics</h2>
           <p className="stats-paragraph">

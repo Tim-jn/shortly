@@ -5,6 +5,7 @@
     height: 500px;
     display: flex;
     flex-direction: row;
+    margin-bottom: 12%;
 }
 
 .infos-text-content {
@@ -64,7 +65,8 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding-top: 7%;
+    padding-top: 12%;
+    position: relative;
 }
 
 .stats-cards {

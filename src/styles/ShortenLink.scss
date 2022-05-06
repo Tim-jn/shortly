@@ -1,0 +1,42 @@
+@import './shared';
+
+.shorten-link-box {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 10%;
+    background: url("../assets/bg-shorten-desktop.svg") no-repeat center; 
+    background-color:$primary-color-violet;
+    height: 168px;
+    border-radius: 10px;
+    position: absolute;
+    top: -84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shorten-link-input {
+    border-radius: 10px;
+    height: 60px;
+    border: none;
+    width: 66%;
+}
+
+.shorten-link-button {
+    border-radius: 10px;
+    height: 60px;
+    border: none;
+    width: 16%;
+    margin-left: 25px;
+    background: $primary-color-cyan;
+    color: #ffffff;
+    font-weight: $font-weight-bold;
+}
+
+input {
+    padding-left: 40px;
+}
+
+::placeholder {
+    color: $neutral-color-Gviolet;
+}
