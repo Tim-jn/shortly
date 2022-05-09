@@ -61,3 +61,19 @@
     font-size: 16px;
     font-style: italic;
 }
+
+.new-shortened-link:nth-child(1) {
+    margin-top: 80px;
+}
+
+.new-shortened-link {
+    width: 100%;
+    max-width: 1050px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}

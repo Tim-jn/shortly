@@ -11,12 +11,19 @@ export default function ShortenLink() {
       input: { value: string }
     }
 
-    const input = target.input.value
-    input ? setValid(true) : setValid(false)
+    const regexUrl =
+      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi
 
-    const newLink: any = [...links]
-    newLink.push(input)
-    setLinks(newLink)
+    const input = target.input.value
+
+    if (input && input.match(regexUrl)) {
+      setValid(true)
+      const newLink: any = [...links]
+      newLink.push(input)
+      setLinks(newLink)
+    } else {
+      setValid(false)
+    }
   }
 
   return (
@@ -38,7 +45,11 @@ export default function ShortenLink() {
         {valid ? '' : <p className="warning">Please add a link</p>}
       </form>
       {links.map((link: string) => {
-        return <div className="new-shortened-link">{link}</div>
+        return (
+          <div className="new-shortened-link">
+            <p className="link">{link}</p>
+          </div>
+        )
       })}
     </div>
   )

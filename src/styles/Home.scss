@@ -65,8 +65,8 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding-top: 12%;
     position: relative;
+    padding-top: 110px;
 }
 
 .stats-cards {
@@ -105,4 +105,8 @@
     color: $neutral-color-Gviolet;
     max-width: 510px;
     margin: 10px auto;
+}
+
+.stats-text {
+    padding-top: 10%;
 }
