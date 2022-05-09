@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/ShortenLink.scss'
 
 export default function ShortenLink() {
   const [valid, setValid] = useState(true)
   const [links, setLinks] = useState([])
+
+  // function for submitting a link
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
@@ -25,6 +27,9 @@ export default function ShortenLink() {
       setValid(false)
     }
   }
+
+  // function timer to copy a shortened link
+
 
   return (
     <div className="shorten-link-content">
@@ -48,6 +53,9 @@ export default function ShortenLink() {
         return (
           <div className="new-shortened-link">
             <p className="link">{link}</p>
+            <div className="shortened-link">
+              <button className="copy-button">Copy</button>
+            </div>
           </div>
         )
       })}
