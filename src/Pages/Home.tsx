@@ -20,14 +20,16 @@ export default function Home() {
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </p>
-          <Link to="/error404">
+          <a href="#shorten-link">
             <button className="started-btn">Get Started</button>
-          </Link>
+          </a>
         </div>
         <div className="infos-image-content">
           <div className="infos-image"></div>
         </div>
       </section>
+      <div id="shorten-link"></div>
+      <br />
       <section className="stats-section">
         <ShortenLink />
         <div className="stats-text">

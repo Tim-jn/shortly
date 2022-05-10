@@ -14,7 +14,7 @@ export default function ShortenLink() {
     }
 
     const regexUrl =
-      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi
+      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/gi
 
     const input = target.input.value
 
@@ -30,6 +30,12 @@ export default function ShortenLink() {
 
   // function timer to copy a shortened link
 
+  // const handleClick = () => {
+  //   this.setState({ text: 'Loading...' })
+  //   setTimeout(() => {
+  //     this.setState({ text: 'view cart', showParagraph: true })
+  //   }, 2000)
+  // }
 
   return (
     <div className="shorten-link-content">

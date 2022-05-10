@@ -5,19 +5,20 @@
     height: 500px;
     display: flex;
     flex-direction: row;
-    margin-bottom: 12%;
+    margin-bottom: 14%;
 }
 
 .infos-text-content {
     margin-left: 10%;
     width: 53%;
-    margin-top: 6%;
+    margin-top: 5%;
 }
 
 .infos-title {
     font-size: 82px;
     line-height: 105px;
     color: $neutral-color-blue;
+    max-width: 688px;
 }
 
 .infos-paragraph {
@@ -27,6 +28,7 @@
     line-height: 42px;
     margin-top: 5px;
     margin-bottom: 50px;
+    max-width: 620px;
 }
 
 .started-btn {
@@ -67,6 +69,7 @@
     align-items: center;
     position: relative;
     padding-top: 110px;
+    margin-top: 60px;
 }
 
 .stats-cards {

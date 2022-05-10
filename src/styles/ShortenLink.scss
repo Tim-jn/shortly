@@ -79,6 +79,14 @@
     justify-content: space-between;
 }
 
+.new-shortened-link p {
+    text-align: left;
+    white-space: nowrap;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .copy-button {
     border-radius: 5px;
     height: 40px;
