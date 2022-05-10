@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../styles/ShortenLink.scss'
 
 export default function ShortenLink() {
