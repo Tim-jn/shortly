@@ -98,7 +98,7 @@ export default function ShortenLink() {
                 }
                 onClick={() => {
                   handleClick(item)
-                  setTimeout(() => removeHandleClick(), 1200)
+                  setTimeout(() => removeHandleClick(), 1000)
                 }}
               >
                 {!item.active ? 'Copy' : 'Copied!'}
