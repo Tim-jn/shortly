@@ -36,7 +36,15 @@ export default function ShortenLink() {
     navigator.clipboard.writeText(item.input)
 
     let mapped = items.map((i) => {
-      return i.id === parseInt(item.id) ? { ...i, active: !i.active } : { ...i }
+      return i.id === parseInt(item.id) ? { ...i, active: true } : { ...i }
+    })
+
+    setItems(mapped)
+  }
+
+  const removeHandleClick = () => {
+    let mapped = items.map((i) => {
+      return { ...i, active: false }
     })
 
     setItems(mapped)
@@ -88,7 +96,10 @@ export default function ShortenLink() {
                     ? 'copy-button'
                     : 'copy-button copy-button-active'
                 }
-                onClick={() => handleClick(item)}
+                onClick={() => {
+                  handleClick(item)
+                  setTimeout(() => removeHandleClick(), 1200)
+                }}
               >
                 {!item.active ? 'Copy' : 'Copied!'}
               </button>
