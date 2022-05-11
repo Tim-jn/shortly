@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/ShortenLink.scss'
 
 export default function ShortenLink() {
-  const [valid, setValid] = useState(true)
-  const [links, setLinks] = useState([])
+  const [valid, setValid] = useState<Boolean>(true)
+  const [items, setItems] = useState<any[]>([])
+  const [shortenedLink, setShortenedLink] = useState()
+  const [error, setError] = useState()
 
   // function for submitting a link
 
@@ -17,12 +19,12 @@ export default function ShortenLink() {
       /https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/gi
 
     const input = target.input.value
+    const id = Math.floor(Math.random() * (100 - 6 + 1)) + 6
 
     if (input && input.match(regexUrl)) {
-      setValid(true)
-      const newLink: any = [...links]
-      newLink.push(input)
-      setLinks(newLink)
+      let copy: any[] = [...items]
+      copy = [...copy, { id, input, active: false }]
+      setItems(copy)
     } else {
       setValid(false)
     }
@@ -30,12 +32,32 @@ export default function ShortenLink() {
 
   // function timer to copy a shortened link
 
-  // const handleClick = () => {
-  //   this.setState({ text: 'Loading...' })
-  //   setTimeout(() => {
-  //     this.setState({ text: 'view cart', showParagraph: true })
-  //   }, 2000)
-  // }
+  const handleClick = (item: any) => {
+    navigator.clipboard.writeText(item.input)
+
+    let mapped = items.map((i) => {
+      return i.id === parseInt(item.id) ? { ...i, active: !i.active } : { ...i }
+    })
+
+    setItems(mapped)
+  }
+
+  // fetch api
+
+  // useEffect(() => {
+  //   fetch(
+  //     'https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html'
+  //   )
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         setShortenedLink(result.items)
+  //       },
+  //       (error) => {
+  //         setError(error)
+  //       }
+  //     )
+  // }, [])
 
   return (
     <div className="shorten-link-content">
@@ -55,12 +77,21 @@ export default function ShortenLink() {
         />
         {valid ? '' : <p className="warning">Please add a link</p>}
       </form>
-      {links.map((link: string) => {
+      {items.map((item: any, key: number) => {
         return (
-          <div className="new-shortened-link">
-            <p className="link">{link}</p>
+          <div key={key} className="new-shortened-link">
+            <p className="link">{item.input}</p>
             <div className="shortened-link">
-              <button className="copy-button">Copy</button>
+              <button
+                className={
+                  !item.active
+                    ? 'copy-button'
+                    : 'copy-button copy-button-active'
+                }
+                onClick={() => handleClick(item)}
+              >
+                {!item.active ? 'Copy' : 'Copied!'}
+              </button>
             </div>
           </div>
         )

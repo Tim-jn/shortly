@@ -100,7 +100,15 @@
     cursor: pointer;
 }
 
+.copy-button-active {
+    background: $primary-color-violet!important;
+}
+
 .copy-button:hover {
     background-color: lighten($primary-color-cyan, 17%);
     transition: all 0.2s;
+}
+
+input:focus {
+    outline: none;
 }
