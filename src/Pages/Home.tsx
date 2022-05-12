@@ -1,6 +1,5 @@
 import '../styles/Home.scss'
 import Header from '../Components/Header'
-import { Link } from 'react-router-dom'
 import FooterBanner from '../Components/FooterBanner'
 import Footer from '../Components/Footer'
 import StatsCard from '../Components/StatsCard'

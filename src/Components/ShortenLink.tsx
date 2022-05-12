@@ -6,7 +6,6 @@ export default function ShortenLink() {
   const [items, setItems] = useState<any[]>([])
   const [linkToShorten, setLinkToShorten] = useState('')
   const [shortenedLink, setShortenedLink] = useState('')
-  const [error, setError] = useState()
 
   // function for submitting a link
 
@@ -65,7 +64,7 @@ export default function ShortenLink() {
           setShortenedLink(response.result?.full_short_link)
         },
         (error) => {
-          setError(error)
+          console.log(error)
         }
       )
   }, [linkToShorten])
