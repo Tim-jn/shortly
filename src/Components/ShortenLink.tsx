@@ -21,12 +21,21 @@ export default function ShortenLink() {
 
     const id = Math.floor(Math.random() * (100 - 6 + 1)) + 6
 
-    if (input.match(regexUrl)) {
+    const isDuplicate = items.some((item) => {
+      if (item.input === input) {
+        return true
+      }
+      return false
+    })
+
+    if (!isDuplicate && input.match(regexUrl)) {
       setValid(true)
       getFetched(input, id)
     } else {
       setValid(false)
     }
+
+    target.input.value = ''
   }
 
   // get data and return an object
@@ -52,8 +61,6 @@ export default function ShortenLink() {
         },
         (error) => {
           console.log(error)
-
-          return error
         }
       )
   }
