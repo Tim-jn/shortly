@@ -66,6 +66,10 @@
     margin-top: 80px;
 }
 
+.shorten-link {
+    color: $primary-color-cyan;
+}
+
 .new-shortened-link {
     width: 100%;
     max-width: 1050px;
@@ -79,12 +83,17 @@
     justify-content: space-between;
 }
 
-.new-shortened-link p {
+.new-shortened-link p.link {
     text-align: left;
     white-space: nowrap;
     max-width: 45%;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.shortened-link {
+    display: flex;
+    align-items: baseline;
 }
 
 .copy-button {

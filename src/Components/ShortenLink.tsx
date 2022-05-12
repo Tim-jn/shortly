@@ -4,12 +4,13 @@ import '../styles/ShortenLink.scss'
 export default function ShortenLink() {
   const [valid, setValid] = useState<Boolean>(true)
   const [items, setItems] = useState<any[]>([])
-  const [shortenedLink, setShortenedLink] = useState()
+  const [linkToShorten, setLinkToShorten] = useState('')
+  const [shortenedLink, setShortenedLink] = useState('')
   const [error, setError] = useState()
 
   // function for submitting a link
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     const target = e.target as typeof e.target & {
       input: { value: string }
@@ -19,11 +20,13 @@ export default function ShortenLink() {
       /https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/gi
 
     const input = target.input.value
+    setLinkToShorten(input)
     const id = Math.floor(Math.random() * (100 - 6 + 1)) + 6
 
     if (input && input.match(regexUrl)) {
+      setValid(true)
       let copy: any[] = [...items]
-      copy = [...copy, { id, input, active: false }]
+      copy = [...copy, { id, input, active: false, shortUrl: shortenedLink }]
       setItems(copy)
     } else {
       setValid(false)
@@ -50,22 +53,22 @@ export default function ShortenLink() {
     setItems(mapped)
   }
 
-  // fetch api
+  // get data
 
-  // useEffect(() => {
-  //   fetch(
-  //     'https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html'
-  //   )
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         setShortenedLink(result.items)
-  //       },
-  //       (error) => {
-  //         setError(error)
-  //       }
-  //     )
-  // }, [])
+  useEffect(() => {
+    fetch(`https://api.shrtco.de/v2/shorten?url=${linkToShorten}`, {
+      method: 'POST',
+    })
+      .then((res) => res.json())
+      .then(
+        (response) => {
+          setShortenedLink(response.result?.full_short_link)
+        },
+        (error) => {
+          setError(error)
+        }
+      )
+  }, [linkToShorten])
 
   return (
     <div className="shorten-link-content">
@@ -90,6 +93,14 @@ export default function ShortenLink() {
           <div key={key} className="new-shortened-link">
             <p className="link">{item.input}</p>
             <div className="shortened-link">
+              <a
+                href={item.shortUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="shorten-link"
+              >
+                {item.shortUrl}
+              </a>
               <button
                 className={
                   !item.active
