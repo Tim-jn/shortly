@@ -31,11 +31,10 @@ export default function ShortenLink() {
     if (!isDuplicate && input.match(regexUrl)) {
       setValid(true)
       getFetched(input, id)
+      target.input.value = ''
     } else {
       setValid(false)
     }
-
-    target.input.value = ''
   }
 
   // get data and return an object
@@ -101,7 +100,13 @@ export default function ShortenLink() {
           className="shorten-link-button"
           value="Shorten it !"
         />
-        {valid ? '' : <p className="warning">Please add a link</p>}
+        {valid ? (
+          ''
+        ) : (
+          <p className="warning">
+            Please add a valid link, which is not already in the list.
+          </p>
+        )}
       </form>
       {items.length >= 1 &&
         items.map((item: any, key: number) => {
