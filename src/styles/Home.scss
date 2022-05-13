@@ -49,14 +49,14 @@
 
 .infos-image-content {
     width: 47%;
-    height: 100%;
+    height: 500px;
     position: relative;
 }
 
 .infos-image {
     background: url('../assets/illustration-working.svg') no-repeat;
     width: 100%;
-    height: 500px;
+    height: 100%;
     position: absolute;
     right: 0px;
     top: 2%;
@@ -125,5 +125,56 @@
     .infos-title {
         font-size: 72px;
         line-height: 95px;
+    }
+}
+
+// mobile version 
+
+@media all and (max-width: 1024px) {
+    .infos-section {
+        flex-direction: column-reverse;
+    }
+
+    .infos-image-content {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .infos-image {
+        width: 130%;
+        height: 100%;
+        background-size: contain;
+        right: -35%;
+    }
+
+    .infos-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .infos-title, .infos-paragraph {
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .infos-title {
+        font-size: 44px;
+        line-height: 48px;
+    }
+
+    .infos-paragraph {
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+
+
+    .stats-cards {
+        flex-direction: column;
     }
 }

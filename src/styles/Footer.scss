@@ -96,3 +96,12 @@
 .instagram:hover {
     content: url("../assets/icon-instagram-cyan.svg");
 }
+
+
+// mobile version 
+
+@media all and (max-width: 1024px) {
+    .footer {
+        display: none;
+    }
+}

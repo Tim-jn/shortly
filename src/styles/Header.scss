@@ -54,3 +54,11 @@
     background-color: lighten($primary-color-cyan, 17%);
     transition: all 0.2s;
 }
+
+// mobile version 
+
+@media all and (max-width: 1024px) {
+    .header {
+        display: none;
+    }
+}
