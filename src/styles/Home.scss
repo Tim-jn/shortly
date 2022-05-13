@@ -76,9 +76,10 @@
 .stats-cards {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 3%;
     margin: 8% 10%;
     position: relative;
+    min-height: 360px;
 }
 
 .stats-cards::after {
@@ -92,12 +93,16 @@
     z-index: -1;
 }
 
+.stats-card:nth-child(1) {
+    align-self: flex-start;
+}
+
 .stats-card:nth-child(2) {
-    margin-top: 50px;
+    align-self: center;
 }
 
 .stats-card:nth-child(3) {
-    margin-top: 100px;
+    align-self: flex-end;
 }
 
 .stats-title {
