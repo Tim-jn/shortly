@@ -2,11 +2,12 @@
 
 .infos-section {
     max-width: 100%;
-    height: 500px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     margin-bottom: 12%;
     margin-top: 5%;
+    gap: 10px
 }
 
 .infos-text-content {
@@ -55,7 +56,7 @@
 .infos-image {
     background: url('../assets/illustration-working.svg') no-repeat;
     width: 100%;
-    height: 100%;
+    height: 500px;
     position: absolute;
     right: 0px;
     top: 2%;
@@ -118,4 +119,11 @@
 
 .stats-text {
     padding-top: 10%;
+}
+
+@media all and (max-width: 1200px) {
+    .infos-title {
+        font-size: 72px;
+        line-height: 95px;
+    }
 }
