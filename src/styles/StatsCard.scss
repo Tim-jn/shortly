@@ -42,5 +42,22 @@
 .stats-icon {
     height: 40px;
     width: 40px;
+}
 
+// mobile version 
+
+@media all and (max-width: 1024px) {
+    .stats-image-bg {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -18%;    
+    }
+
+    .stats-card {
+        margin-bottom: 100px;
+    }
+
+    .stats-card:nth-child(1) {
+        margin-top: 70px;
+    }
 }

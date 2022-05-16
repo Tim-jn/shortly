@@ -16,3 +16,17 @@
     font-size: 38px;
     margin-bottom: 25px;
 }
+
+// mobile version 
+
+@media all and (max-width: 1024px) {
+    .footer-banner {
+        background: url('../assets/bg-boost-mobile.svg') no-repeat right;
+        background-color: $primary-color-violet;
+    }
+
+    .footer-banner-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+}

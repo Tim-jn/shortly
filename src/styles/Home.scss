@@ -171,10 +171,33 @@
         font-size: 18px;
         line-height: 30px;
         margin-top: 10px;
+    }    
+    
+    .stats-title {
+        font-size: 28px;
     }
 
+    .stats-paragraph {
+        font-size: 16px;
+        max-width: 80%;
+    }
 
     .stats-cards {
         flex-direction: column;
+        margin: 5% 6.5%;
+    }
+
+    .stats-card {
+        max-width: 460px;
+    }
+
+    .stats-cards::after {
+        content: "";
+        width: 8px;
+        height: 80%;
+        background: $primary-color-cyan;
+        position: absolute;
+        top: 10%;
+        left: 50%;transform: translateX(-50%);
     }
 }

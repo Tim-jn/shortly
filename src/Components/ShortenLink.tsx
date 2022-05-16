@@ -37,6 +37,22 @@ export default function ShortenLink() {
     }
   }
 
+  // create a new object
+
+  const createObject = (response: any, id: number, input: string) => {
+    let copy: any[] = [...items]
+    copy = [
+      ...copy,
+      {
+        id,
+        input,
+        active: false,
+        shortUrl: response.result?.full_short_link,
+      },
+    ]
+    setItems(copy)
+  }
+
   // get data and return an object
 
   const getFetched = async (input: string, id: number) => {
@@ -46,17 +62,7 @@ export default function ShortenLink() {
       .then((res) => res.json())
       .then(
         (response) => {
-          let copy: any[] = [...items]
-          copy = [
-            ...copy,
-            {
-              id,
-              input,
-              active: false,
-              shortUrl: response.result?.full_short_link,
-            },
-          ]
-          setItems(copy)
+          createObject(response, id, input)
         },
         (error) => {
           console.log(error)
@@ -104,7 +110,7 @@ export default function ShortenLink() {
           ''
         ) : (
           <p className="warning">
-            Please add a valid link, which is not already in the list.
+            Please add a valid link.
           </p>
         )}
       </form>

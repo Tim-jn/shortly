@@ -148,4 +148,54 @@ input:focus {
         max-width: 281px;
         height: 50px;
     }
+
+    .warning {
+        bottom: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .new-shortened-link {
+        height: 145px;
+        padding: 0 30px;    
+        flex-direction: column;
+        position: relative;
+    }
+
+    .new-shortened-link::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: $neutral-color-gray;
+        top: 45px;
+        opacity: 0.6;
+    }
+
+    .new-shortened-link p.link {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 11px;
+        font-size: 16px;
+    }
+
+    .shorten-link {
+        margin-bottom: 10px;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .shortened-link {
+        flex-direction: column;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .copy-button {
+        margin: auto;
+        width: 100%;
+        max-width: 280px;
+    }
 }
