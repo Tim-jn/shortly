@@ -207,3 +207,10 @@
         margin-bottom: 50px;
     }
 }
+
+@media all and (max-width: 560px) {
+    .infos-image-content {
+        max-height: 325px;
+        margin-bottom: 25px;
+    }
+}
