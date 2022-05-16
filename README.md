@@ -28,9 +28,11 @@ Your users should be able to:
 - Sass
 
 ## Maquettes
-&nbsp;
-![maquette1]((https://user-images.githubusercontent.com/82055836/168647877-a0e94bd0-9c26-4b7e-b862-b3d0c62b72ab.jpg)
-)
-&nbsp;![desktop-design](https://user-images.githubusercontent.com/82055836/168648035-ec1b9698-79ff-4110-af02-2f8d8f0cb7a9.jpg)
+![desktop-active-states](https://user-images.githubusercontent.com/82055836/168648075-505d211b-94b6-48fb-b59f-efa988962914.jpg)
+![desktop-design](https://user-images.githubusercontent.com/82055836/168648082-82b78e2b-ed60-4956-a847-57ca5c568217.jpg)
+![desktop-preview](https://user-images.githubusercontent.com/82055836/168648088-36af32b6-fb4f-4790-a82f-c9126d6bc92e.jpg)
+![mobile-active-states](https:![mobile-design](https://user-images.githubusercontent.com/82055836/168648106-3902e66c-cc41-4948-b992-77ee43573b6b.jpg)
+![mobile-design](https://user-images.githubusercontent.com/82055836/168648141-c27febd0-77a7-450f-97a8-46a379910def.jpg)
 
-![maquette2](https://user-images.githubusercontent.com/82055836/149948802-83405309-04fd-4ff3-bae8-fc69c0304126.png)
+
+![mobile-navigation](https://user-images.githubusercontent.com/82055836/168648111-8b012438-90fc-4ef5-b8d8-3a73627bc0b2.jpg)
