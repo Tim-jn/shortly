@@ -29,7 +29,7 @@ Your users should be able to:
 
 ## Maquettes
 &nbsp;
-![maquette](![desktop-active-states](https://user-images.githubusercontent.com/82055836/168647877-a0e94bd0-9c26-4b7e-b862-b3d0c62b72ab.jpg)
+![maquette]((https://user-images.githubusercontent.com/82055836/168647877-a0e94bd0-9c26-4b7e-b862-b3d0c62b72ab.jpg)
 )
 &nbsp;
 ![maquette2](https://user-images.githubusercontent.com/82055836/149948802-83405309-04fd-4ff3-bae8-fc69c0304126.png)
