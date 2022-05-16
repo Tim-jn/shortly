@@ -42,6 +42,10 @@
     font-weight: $font-weight-bold;
 }
 
+.started-btn a {
+    color: #fff;
+}
+
 .started-btn:hover {
     background-color: lighten($primary-color-cyan, 17%);
     transition: all 0.2s;

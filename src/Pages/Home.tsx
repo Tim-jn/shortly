@@ -19,9 +19,9 @@ export default function Home() {
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </p>
-          <a href="#shorten-link">
-            <button className="started-btn">Get Started</button>
-          </a>
+          <button className="started-btn">
+            <a href="#shorten-link">Get Started</a>
+          </button>
         </div>
         <div className="infos-image-content">
           <div className="infos-image"></div>
