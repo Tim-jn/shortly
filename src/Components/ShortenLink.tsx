@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import '../styles/ShortenLink.scss'
+import Spinner from "./Spinner"
 
 export default function ShortenLink() {
   const [valid, setValid] = useState<Boolean>(true)
   const [items, setItems] = useState<any[]>([])
+  const [loading, setLoading] = useState<Boolean>(false)
+  console.log(loading)
 
   // function for submitting a link
 
@@ -56,6 +59,7 @@ export default function ShortenLink() {
   // get data and return an object
 
   const getFetched = async (input: string, id: number) => {
+    setLoading(true)
     await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`, {
       method: 'POST',
     })
@@ -63,6 +67,7 @@ export default function ShortenLink() {
       .then(
         (response) => {
           createObject(response, id, input)
+          setLoading(false)
         },
         (error) => {
           console.log(error)
@@ -106,15 +111,9 @@ export default function ShortenLink() {
           className="shorten-link-button"
           value="Shorten it !"
         />
-        {valid ? (
-          ''
-        ) : (
-          <p className="warning">
-            Please add a valid link.
-          </p>
-        )}
+        {valid ? '' : <p className="warning">Please add a valid link.</p>}
       </form>
-      {items.length >= 1 &&
+      {loading ? <Spinner /> : items.length >= 1 &&
         items.map((item: any, key: number) => {
           return (
             <div key={key} className="new-shortened-link">
